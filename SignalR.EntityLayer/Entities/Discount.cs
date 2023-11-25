@@ -7,5 +7,6 @@
         public string DiscountAmount { get; set; }
         public string DiscountDescription { get; set; }
         public string DiscountImageURL { get; set; }
+        public bool Status { get; set; }
     }
 }
