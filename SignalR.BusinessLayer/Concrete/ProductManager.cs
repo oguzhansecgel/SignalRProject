@@ -13,18 +13,10 @@ namespace SignalR.BusinessLayer.Concrete
 	{
 		private readonly IProductDal _productDal;
 
+
 		public ProductManager(IProductDal productDal)
 		{
 			_productDal = productDal;
-		}
-		public void TAdd(Product entity)
-		{
-			_productDal.Add(entity);
-		}
-
-		public void TDelete(Product entity)
-		{
-			_productDal.Delete(entity);
 		}
 
 		public Product TGetByID(int id)
@@ -36,7 +28,22 @@ namespace SignalR.BusinessLayer.Concrete
 		{
 			return _productDal.GetListAll();
 		}
-		
+
+		public List<Product> TGetProductsWithCategory()
+		{
+			return _productDal.GetProductsWithCategory();
+		}
+		public void TAdd(Product entity)
+		{
+			_productDal.Add(entity);
+		}
+
+		public void TDelete(Product entity)
+		{
+			_productDal.Delete(entity);
+		}
+
+
 		public void TUpdate(Product entity)
 		{
 			_productDal.Update(entity);
