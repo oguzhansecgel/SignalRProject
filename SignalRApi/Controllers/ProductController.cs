@@ -53,6 +53,7 @@ namespace SignalRApi.Controllers
 				ProductPrice = createProductDto.ProductPrice,
 				ProductName = createProductDto.ProductName,
 				ProductStatus = createProductDto.ProductStatus,
+				CategoryID=createProductDto.CategoryID
 			});
 			return Ok("Ürün Bilgisi Eklendi");
 		}
@@ -80,6 +81,7 @@ namespace SignalRApi.Controllers
 				ProductName = updateProductDto.ProductName,
 				ProductStatus = updateProductDto.ProductStatus,
 				ProductID = updateProductDto.ProductID,
+				CategoryID = updateProductDto.CategoryID
 			});
 			return Ok("Ürün Bilgisi Güncellendi");
 		}
